@@ -1,0 +1,9 @@
+module ring_oscillator_tb();
+wire osc_out;
+ring_oscillator dut(osc_out);
+initial begin
+$monitor("time=%0dns, osc_out=%b", $time,osc_out);
+#500;
+$stop;
+end
+endmodule
